@@ -1,0 +1,20 @@
+<h1>projects</h1>
+
+<% @prjcts.each do |prjct| %>
+	<div class="projects">
+		<%= link_to prjct do %>
+			<% if prjct.pictures.exists? %>
+				<div class="project" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 1255, 0.4)), url('<%= prjct.pictures.last.image.url %>');">
+					<h2><%= prjct.name %></h2>
+				</div>
+			<% else %> 
+				<div class="project">
+					<h2><%= prjct.name %></h2>
+					<p> image coming soon ;) </p>
+				</div>
+			<% end %>
+		<% end %>
+		<%= link_to 'Edit', edit_prjct_path(prjct) %>
+		<%= link_to 'Destroy', prjct, method: :delete, data: { confirm: 'Delete this project?' } %>
+	</div>
+<% end %>
