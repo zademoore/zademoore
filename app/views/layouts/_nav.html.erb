@@ -1,10 +1,13 @@
-<button class="hamburger hamburger--stand" type="button">
+<div class="nav-drawer">
+	<%= link_to 'Add New Project', new_prjct_path, class: 'btn-new' %>
+	<hr/>
+	<ul>
+		<li><%= link_to 'Home', root_path %></li>
+	</ul>
+</div>
+
+<button class="hamburger hamburger--stand menu-trigger" type="button">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
 </button>
-<div class="nav-drawer">
-	<ul>
-		<li></li>
-	</ul>
-</div>

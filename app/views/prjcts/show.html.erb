@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div class="space">
+	<% if @pictures.blank? %>
+	<div class="nopics">
+		<p>Pictures coming soon</p>
+		<%= link_to 'Add Picture', new_prjct_picture_path(@prjct), class: 'btn btn-new' %>
+	</div>
+	<% else %>
+		<% @pictures.each do |picture| %>
+			<div class="thousandwords">
+				<%= image_tag picture.image.url %>
+			</div>
+			<p><%= picture.caption %></p>
+		<% end %>
+	<% end %>
+</div>
+
+<div class="overview">
+	<strong><%= @prjct.title %></strong>
+
+	<p>
+	  <%= @prjct.description %>
+	</p>
+
+
+
+
+	<%= link_to 'Edit', edit_prjct_path(@prjct) %> |
+	<%= link_to 'Back', prjcts_path %> |
+	<%= link_to 'New Picture', new_prjct_picture_path(@prjct) %>
+</div>

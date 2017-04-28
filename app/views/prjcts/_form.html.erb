@@ -1,4 +1,4 @@
-<%= form_for(@prjct) do |f| %>
+<%= form_for(prjct) do |f| %>
 	<div class="form-group">
 		<%= f.label :title %>
 		<%= f.text_field :title, class: 'form-control' %>
@@ -6,7 +6,7 @@
 
 	<div class="form-group">
 		<%= f.label :description %>
-		<%= f.text_area :description, class: 'form-control' %>
+		<%= f.text_area :description, class: 'form-control fixed-text' %>
 	</div>
 
 	<div class="form-group">

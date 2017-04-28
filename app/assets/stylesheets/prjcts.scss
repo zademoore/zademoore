@@ -1,3 +1,64 @@
 // Place all the styles related to the Prjcts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*** SHOW ***/
+.overview {
+    width: 40%;
+    right: 0;
+    position: fixed;
+}
+
+.space {
+	position: relative;
+	width: 60%;
+	height: 100vh;
+	float: left;
+}
+
+.thousandwords img {
+	width: 100%;
+}
+
+.nopics {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.new-pro {
+    display: block;
+    width: 300px;
+    margin: 22px auto;
+    text-align: center;
+}
+
+.door {
+    position: relative;
+    width: 50%;
+    height: 75vh;
+    float: left;
+}
+
+.windoe {
+    height: 70vh;
+    width: 100%;
+    background-size: 114%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-size 2s ease-in-out;
+}
+
+
+.windoe:hover {
+    background-size: 100%;
+}
+
+
+.windoe p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

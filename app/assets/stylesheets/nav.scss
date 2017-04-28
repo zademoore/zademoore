@@ -1,0 +1,32 @@
+.hamburger {
+	z-index: 9999;
+}
+
+.menu-trigger {
+	position: relative;
+	left: 30px;
+	transition: all .5s ease-in-out;
+}
+
+.menu-trigger.active {
+	left: 400px;
+}
+
+.nav-drawer {
+	width: 400px;
+	height: 100vh;
+	background-color: #ffffff;
+	text-align: center;
+	position: fixed;
+	left: -370px;
+	transition: all .5s ease-in-out;
+}
+
+.nav-drawer.open {
+	left: 0;
+	padding-top: 3em;
+}
+
+hr {
+	margin-top: 3em;
+}

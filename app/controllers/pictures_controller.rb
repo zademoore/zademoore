@@ -8,7 +8,7 @@ class PicturesController < ApplicationController
 
 	def create
 		@picture = Picture.new(picture_params)
-		@picture.prjct_id = @prjct.prjct_id
+		@picture.prjct_id = @prjct.id
 
 		if @picture.save
 			redirect_to @prjct

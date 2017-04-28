@@ -1,0 +1,17 @@
+<%= form_for([@prjct, picture]) do |f| %>
+ <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :caption %>
+    <%= f.text_area :caption, class: 'form-control fixed-text' %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

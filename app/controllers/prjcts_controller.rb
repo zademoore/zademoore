@@ -8,6 +8,7 @@ class PrjctsController < ApplicationController
 
 	def show
 		@pictures = Picture.where(prjct_id: @prjct.id).order("created_at DESC")
+		@prjct = Prjct.find(params[:id])
 	end
 
 	def new
@@ -45,7 +46,7 @@ class PrjctsController < ApplicationController
 		end
 
 		def prjct_params
-			params.require(:prjct).permit(:name, :desc, :deight)
+			params.require(:prjct).permit(:title, :description, :deight)
 		end
 	end
 
