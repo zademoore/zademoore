@@ -1,9 +1,17 @@
 @import 'fonts';
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import 'hamburgers';
 
-$primary: #F7F7F7;
+$titles: 0.17em;
+$white: #FFF;
+$black: #000;
+
+:focus {
+    outline: 0;
+}
 
 svg#Zadé {
     position: fixed;
@@ -36,9 +44,9 @@ body {
     font-size: 22px;
     font-family: Brandon Grotesque;
     letter-spacing: 0.04em;
-    color: #333;
+    color: $black;
     overflow-x: hidden;
-    background-color: $primary;
+    background-color: $white;
 }
 
 div {
@@ -56,17 +64,26 @@ h3 {
     text-transform: uppercase;
     display: inline-block;
     margin-top: 0;
+    letter-spacing: $titles;
 }
 
 h1 {
     font-size: 365%;
-    margin-bottom: .5em;
-    margin-top: 0;
+}
+
+h2 {
+    font-size: 180%;
+}
+
+h3 {
+    font-size: 175%;
+    font-family: Brandon Bold;
 }
 
 p {
     line-height: 40px;
     margin: 0;
+    font-family: League Spartan;
 }
 
 ul, ol {
@@ -95,16 +112,25 @@ a.btn-new, .btn-new {
     background: transparent;
 }
 
+.top {
+    padding: 0 50px;
+}
+
+.over .top {
+    padding: 0 64px;
+}
+
 .rapper {
     position: absolute;
     width: 98vw;
-    left: 30px;
-    padding: 0 70px;
-    /* top: 0; */transition: all .5s ease-in-out;
+    left: 20px;
+    transition: all .5s ease-in-out;
+    padding: 0 15px;
 }
 
 .rapper.over {
 	left:400px;
+    padding: 0 0px;
 }
 
 .form-group {
@@ -117,4 +143,8 @@ textarea {
 
 textarea.fixed-text {
     height: 210px;
+}
+
+p#notice {
+    margin-left: 3em;
 }

@@ -17,13 +17,20 @@ class PicturesController < ApplicationController
 		end
 	end
 
+	def edit
+	end
+
 	def update
-		@picture.update(picture_params)
+		if @picture.update(picture_params)
+			redirect_to @prjct
+		else
+			render 'new'
+		end
 	end
 
 	def destroy
 		@picture.destroy
-		redirect_to prjct_path
+		redirect_to prjct_path(@prjct)
 	end
 
 	private

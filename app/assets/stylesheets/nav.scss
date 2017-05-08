@@ -1,10 +1,12 @@
+$heart: #BB1907;
+
 .hamburger {
 	z-index: 9999;
+	position: fixed;
 }
 
 .menu-trigger {
-	position: relative;
-	left: 30px;
+	left: 20px;
 	transition: all .5s ease-in-out;
 }
 
@@ -15,10 +17,10 @@
 .nav-drawer {
 	width: 400px;
 	height: 100vh;
-	background-color: #ffffff;
+	background-color: #f7f7f7;
 	text-align: center;
 	position: fixed;
-	left: -370px;
+	left: -380px;
 	transition: all .5s ease-in-out;
 }
 
@@ -27,6 +29,31 @@
 	padding-top: 3em;
 }
 
+
 hr {
+	width: 100%;
 	margin-top: 3em;
+	border-top: 1.5px solid #e7e7e7;
+}
+
+.actions li {
+	margin-bottom: 1.5em;
+}
+
+.logout li a {
+	color: #951406;
+}
+
+.logout li a:hover,
+.logout li a:visited {
+	color: $heart;
+}
+
+.login, 
+.logout {
+	width: 100%;
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

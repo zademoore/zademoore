@@ -1,0 +1,21 @@
+<section class="top">
+	<h1>Edit</h1>
+</section>
+<section>
+	<%= form_for([@prjct, @picture]) do |f| %>
+		<div class="edit-form-img">
+			<%= image_tag @picture.image.url %>
+		</div>
+		<div class="edit-picture-form">
+	  		<div class="form-group">
+	    		<%= f.label :caption %>
+	    		<%= f.text_area :caption, class: 'form-control fixed-text' %>
+	  		</div>
+
+	  		<div class="actions">
+	    		<%= f.submit %>
+	  		</div>
+	  	</div>
+
+	<% end %>
+</section>	

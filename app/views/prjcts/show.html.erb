@@ -1,3 +1,10 @@
+<% content_for :menu do %>
+	<ul class="actions">
+		<li><%= add_picture_link %></li>
+		<li><%= edit_project_link %></li>
+		<li><%= delete_project_link %></li>
+	</ul>
+<% end %>
 <p id="notice"><%= notice %></p>
 <div class="space">
 	<% if @pictures.blank? %>
@@ -11,12 +18,14 @@
 				<%= image_tag picture.image.url %>
 			</div>
 			<p><%= picture.caption %></p>
+			<%= link_to 'Edit Img', edit_prjct_picture_path(@prjct, picture) %>
+			<%= link_to 'Delete Image', [@prjct, picture], method: :delete %>
 		<% end %>
 	<% end %>
 </div>
 
 <div class="overview">
-	<strong><%= @prjct.title %></strong>
+	<h2><%= @prjct.title %></h2>
 
 	<p>
 	  <%= @prjct.description %>
@@ -26,6 +35,6 @@
 
 
 	<%= link_to 'Edit', edit_prjct_path(@prjct) %> |
-	<%= link_to 'Back', prjcts_path %> |
+	<%= link_to 'Back', root_path %> |
 	<%= link_to 'New Picture', new_prjct_picture_path(@prjct) %>
 </div>
