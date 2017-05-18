@@ -1,14 +1,14 @@
 class SessionsController < ApplicationController
 
 
-	# def new
+	def new
 
-	# end
+	end
 
 	def create
 		auth_hash = request.env['omniauth.auth']
 
-		render :text => auth_hash.inspect
+		# render :text => auth_hash.inspect
 		begin
 			@user = User.from_omniauth(request.env['omniauth.auth'])
 			session[:user_id] = @user.id
@@ -19,17 +19,17 @@ class SessionsController < ApplicationController
 		redirect_to root_path
 	end
 
-	# def destroy
-	# 	if current_user
-	# 		session.delete(:user_id)
-	# 		flash[:success] = 'Come back soon!'
-	# 	end
-	# 	redirect_to root_path
-	# end
+	def destroy
+		if current_user
+			session.delete(:user_id)
+			flash[:success] = 'Come back soon!'
+		end
+		redirect_to root_path
+	end
 
-	# def auth_failure
-	# 	redirect_to root_path
-	# end
+	def auth_failure
+		redirect_to root_path
+	end
 
 
 #### old

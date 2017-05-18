@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'carrierwave', '~> 1.0'
 
 gem 'omniauth-facebook'
-gem 'dotenv-rails', group: [:development, :tests]
+gem 'dotenv-rails', group: [:development, :test]
 
 gem 'hamburgers'
 gem 'bootstrap-sass'

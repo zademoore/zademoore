@@ -20,7 +20,7 @@
 					</div>
 				<% end %>
 			<% end %>
-			<% if current_user && admin_user %>
+			<% if current_user %>
 				<div class="action-links">
 					<%= link_to 'Add Picture', new_prjct_picture_path(prjct) %>
 					<%= link_to 'Edit', edit_prjct_path(prjct) %>
