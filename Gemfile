@@ -33,9 +33,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave', '~> 1.0'
 
-gem 'omniauth-facebook'
-gem 'dotenv-rails', group: [:development, :test]
-
 gem 'hamburgers'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 4.6.2'
