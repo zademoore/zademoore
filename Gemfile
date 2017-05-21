@@ -36,6 +36,9 @@ gem 'carrierwave', '~> 1.0'
 gem 'hamburgers'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 4.6.2'
+gem 'figaro'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
