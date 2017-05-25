@@ -37,7 +37,7 @@ class PrjctsController < ApplicationController
 
 	def destroy
 		@prjct.destroy
-		redirect_to prjcts_url, notice: 'Project entry was deleted.'
+		redirect_to root_path, notice: 'Project entry was deleted.'
 	end
 
 	private

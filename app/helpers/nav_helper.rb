@@ -12,6 +12,6 @@ module NavHelper
 	end
 
 	def delete_project_link
-		link_to 'Delete This', @prjct, method: :destroy, class: 'btn-new', data: { confirm: 'Are You Sure?' }
+		link_to 'Delete This', @prjct, method: :delete, class: 'btn-new', data: { confirm: 'Are You Sure?' }
 	end
 end

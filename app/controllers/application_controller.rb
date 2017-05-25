@@ -7,6 +7,12 @@ class ApplicationController < ActionController::Base
   	@current_user ||= User.find_by(id: session[:user_id])
   end
 
+  def admin_user
+  	@admin_user ||= current_user.uid == ENV['ADMIN_UID']
+  end
+
   helper_method :current_user
+
+  helper_method :admin_user
 
 end

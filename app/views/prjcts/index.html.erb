@@ -5,7 +5,7 @@
 <section class="top">
 	<h1>projects</h1>
 </section>
-<section>
+<section class="container">
 	<% @prjcts.each do |prjct| %>
 		<div class="projects">
 			<%= link_to prjct do %>
@@ -20,13 +20,13 @@
 					</div>
 				<% end %>
 			<% end %>
-			
+			<% if current_user && admin_user %>
 				<div class="action-links">
-					<%= link_to 'Add Picture', new_prjct_picture_path(prjct) %>
-					<%= link_to 'Edit', edit_prjct_path(prjct) %>
-					<%= link_to 'Delete', prjct, method: :delete, data: { confirm: 'Delete this project?' } %>
+					<%= link_to 'Add Picture', new_prjct_picture_path(prjct), class: 'btn btn-new' %>
+					<%= link_to 'Edit', edit_prjct_path(prjct), class: 'btn btn-new' %>
+					<%= link_to 'Delete', prjct, method: :delete, data: { confirm: 'Delete this project?' }, class: 'btn btn-new' %>
 				</div>
-		
+			<% end %>
 		</div>
 	<% end %>
 </section>

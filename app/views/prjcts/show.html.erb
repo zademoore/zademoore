@@ -6,35 +6,44 @@
 	</ul>
 <% end %>
 <p id="notice"><%= notice %></p>
-<div class="space">
-	<% if @pictures.blank? %>
-	<div class="nopics">
-		<p>Pictures coming soon</p>
-		<%= link_to 'Add Picture', new_prjct_picture_path(@prjct), class: 'btn btn-new' %>
-	</div>
-	<% else %>
-		<% @pictures.each do |picture| %>
-			<div class="thousandwords">
-				<%= image_tag picture.image.url %>
-			</div>
-			<p><%= picture.caption %></p>
-			<%= link_to 'Edit Img', edit_prjct_picture_path(@prjct, picture) %>
-			<%= link_to 'Delete Image', [@prjct, picture], method: :delete %>
-		<% end %>
-	<% end %>
-</div>
 
-<div class="overview">
+<section class="overview">
 	<h2><%= @prjct.title %></h2>
 
 	<p>
 	  <%= @prjct.description %>
 	</p>
 
+</section>
+<% if @pictures.blank? %>
+<section class="nopics">
+	<p>Pictures coming soon</p>
+	<% if current_user && admin_user %>
+		<%= link_to 'Add Picture', new_prjct_picture_path(@prjct), class: 'btn btn-new' %>
+	<% end %>
+</section>
+<% else %>
+	<% @pictures.each do |picture| %>
+	<section class="images">
+		<div class="thousandwords">
+			<%= image_tag picture.image.url %>
+			<div class="<%= cycle("left", "right") %>">
+				<%= picture.caption %>
+				<% if current_user && admin_user %>
+					<ul>
+						<li>
+							<%= link_to 'Edit Caption', edit_prjct_picture_path(@prjct, picture), class: 'btn btn-new' %>
+						</li>
+						<li>
+							<%= link_to 'Delete Image', [@prjct, picture], method: :delete, class: 'btn btn-new' %>
+						</li>
+					</ul>
+				<% end %>
+			</div>
+		</div>
+	</section>
+	<% end %>
+
+<% end %>
 
 
-
-	<%= link_to 'Edit', edit_prjct_path(@prjct) %> |
-	<%= link_to 'Back', root_path %> |
-	<%= link_to 'New Picture', new_prjct_picture_path(@prjct) %>
-</div>
