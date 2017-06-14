@@ -43,7 +43,18 @@
 		</div>
 	</section>
 	<% end %>
-
 <% end %>
+<section class="comments">
+	<div class="comments" id="comments_<%= @prjct.id %>">
+		<% if @prjct.comments %>
+		 	<%= render @prjct.comments.order('created_at DESC'), prjct: @prjct %>
+		<% end %>
+	</div>
+	<% if current_user %>
+		<%= render 'comments/form' %>
+	<% end %>
+	 
+		
+</section>
 
 

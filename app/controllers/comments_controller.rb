@@ -3,20 +3,26 @@ class CommentsController < ApplicationController
 
 	def create
 		@comment = @prjct.comments.build(comment_params)
-		@comment.user_id = current_user.id
-
+		@comment.user = current_user
 		if @comment.save
-			redirect_to :back
-		else
-			render root_path
+			respond_to do |format|
+				format.html { redirect_to root_path }
+				format.js
+			end
 		end
+		
 	end
 
 	def destroy
-		@comment = @post.comments.find(params[:id])
+		@comment = @prjct.comments.find(params[:id])
 
-		@comment.destroy
-		redirect_to :back
+		if @comment.user == current_user
+			@comment.delete
+			respond_to do |format|
+				format.html { redirect_to root_path }
+				format.js
+			end
+		end
 	end
 
 	private

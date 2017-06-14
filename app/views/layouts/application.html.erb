@@ -13,6 +13,9 @@
   	<div class="rapper">
     	<%= yield %>
     </div>
+    <% if controller.controller_name == "prjcts" %>
+    	<span class="glyphicon glyphicon-heart-empty like"></span>
+    <% end %>
     <%= logo'Zadé-00' %>
   </body>
 

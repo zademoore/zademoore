@@ -13,7 +13,8 @@ $black: #000;
     outline: 0;
 }
 
-svg#Zadé {
+svg#Zadé,
+.like {
     position: fixed;
     bottom: 2em;
     right: 1.3em;
@@ -128,7 +129,7 @@ a.btn-new, .btn-new {
     width: 98vw;
     left: 20px;
     transition: all .5s ease-in-out;
-    padding: 0 15px;
+    padding: 0 15px 0 0;
 }
 
 .rapper.over {

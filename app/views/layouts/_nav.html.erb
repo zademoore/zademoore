@@ -12,6 +12,7 @@
 <% if current_user %>
 	<ul class="logout">
 		<li><hr/></li>
+		<li><%= current_user.name %></li>
 		<li><%= link_to 'Logout', logout_path, method: :delete %></li>
 	</ul>
 <% else %>

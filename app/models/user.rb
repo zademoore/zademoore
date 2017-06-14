@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-	has_many :comments, dependent: :destroy
+	has_many :comments
+
 	class << self
 		def from_omniauth(auth_hash)
 			user = find_or_create_by(uid: auth_hash['uid'], provider: auth_hash['provider'])

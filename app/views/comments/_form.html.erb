@@ -1,0 +1,7 @@
+<div class="container comment-form-container">
+	<div class="comment-form">
+		<%= form_for([@prjct, @prjct.comments.build], remote: true) do |f| %>
+			<%= f.text_field :content, placeholder: 'Drop a comment', class: 'comment_content form-control', id: "comment_content_#{@prjct.id}" %>
+		<% end %>
+	</div>
+</div>

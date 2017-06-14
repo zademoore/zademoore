@@ -1,0 +1,2 @@
+$('#comments_<%= @prjct.id %>').prepend("<%=j render 'comments/comment', prjct: @prjct, comment: @comment %>");
+$('#comment_content_<%= @prjct.id %>').val('')

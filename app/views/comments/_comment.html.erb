@@ -1,0 +1,17 @@
+
+	<div class="comment-space">
+		<div class="user-name">
+			<%= comment.user.name %>
+		</div>
+		<div class="comment-content">
+			<%= comment.content %>
+		</div>
+		<% if comment.user == current_user %>
+			<%= link_to prjct_comment_path(@prjct, comment), method: :delete, data: { confirm: "sure?" }, remote: true do %>
+				<span class="glyphicon glyphicon-trash delete-comment"></span>
+			<% end %>
+
+		<% end %>
+	</div>
+
+
