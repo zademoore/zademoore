@@ -13,10 +13,12 @@
   	<div class="rapper">
     	<%= yield %>
     </div>
-    <% if controller.controller_name == "prjcts" %>
-    	<span class="glyphicon glyphicon-heart-empty like"></span>
-    <% end %>
-    <%= logo'Zadé-00' %>
+    <div class="logo">
+	    <% if controller.controller_name == "prjcts" && controller.action_name == "show" %>
+	    	<span class="glyphicon glyphicon-heart-empty like"></span>
+	    <% end %>
+	    <%= logo'Zadé-00' %>
+    </div>
   </body>
 
 	<script>

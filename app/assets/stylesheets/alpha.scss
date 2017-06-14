@@ -13,12 +13,20 @@ $black: #000;
     outline: 0;
 }
 
-svg#Zadé,
-.like {
+.logo {
     position: fixed;
     bottom: 2em;
     right: 1.3em;
-    height: 3em;
+    height: 4em;
+    width: 3em;
+    text-align: center;
+}
+
+svg#Zadé {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -0%);
 }
 
 .clearfix:after {
