@@ -1,6 +1,6 @@
 class PrjctsController < ApplicationController
 
-	before_action :set_prjct, only: [:show, :edit, :update, :destroy]
+	before_action :set_prjct, only: [:show, :edit, :update, :destroy, :like]
 
 	def index
 		@prjcts = Prjct.all.order("created_at desc")
@@ -38,6 +38,15 @@ class PrjctsController < ApplicationController
 	def destroy
 		@prjct.destroy
 		redirect_to root_path, notice: 'Project entry was deleted.'
+	end
+
+	def like
+		if @prjct.liked_by current_user
+			respond_to do |format|
+				format.html { redirect_to :back }
+				format.js
+			end
+		end
 	end
 
 	private

@@ -12,7 +12,6 @@ $black: #000;
 :focus {
     outline: 0;
 }
-
 .logo {
     position: fixed;
     bottom: 2em;
@@ -27,6 +26,15 @@ svg#Zadé {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -0%);
+}
+
+.like {
+  text-decoration: none;
+}
+
+.like-button a:hover, .like-button a:focus {
+  text-decoration: none;
+  color: #FA3263;
 }
 
 .clearfix:after {

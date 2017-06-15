@@ -14,9 +14,20 @@
     	<%= yield %>
     </div>
     <div class="logo">
-	    <% if controller.controller_name == "prjcts" && controller.action_name == "show" %>
-	    	<span class="glyphicon glyphicon-heart-empty like"></span>
-	    <% end %>
+    	<% if current_user %>
+		    <% if controller.controller_name == "prjcts" && controller.action_name == "show" %>
+		    	<div class="likes" id="likes_#{@prjct.id}">
+					<%= display_likes @prjct %>
+				</div>
+		    <div class="like-button">
+		  		<%= link_to '', like_prjct_path(@prjct.id), remote: true, id: "like_#{@prjct.id}", class: "glyphicon #{liked_prjct @prjct}" %>
+		  	</div>
+		    <% end %>
+		<% else %>
+			<% if controller.controller_name == "prjcts" && controller.action_name == "show" %>
+		    	<span class="glyphicon glyphicon-heart-empty like"></span>
+		    <% end %>
+		<% end %>
 	    <%= logo'Zadé-00' %>
     </div>
   </body>

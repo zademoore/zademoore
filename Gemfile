@@ -39,6 +39,7 @@ gem 'font-awesome-sass', '~> 4.6.2'
 gem 'figaro'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'acts_as_votable', '~> 0.10.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
