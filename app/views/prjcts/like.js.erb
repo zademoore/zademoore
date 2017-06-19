@@ -1,2 +1,3 @@
 $("#like_<%= @prjct.id %>").removeClass('glyphicon-heart-empty').addClass('glyphicon-heart');
-$("#likes_<%= @prjct.id %>").html("<%= j (render partial:'prjcts/likes', locals: {prjct: @prjct} ) %>");
+$("#like_<%= @prjct.id %>").attr("href", '/prjcts/<%= @prjct.id %>/unlike');
+$("#likes_<%= @prjct.id %>").html("<%= j (render partial:'prjcts/likes', locals: { prjct: @prjct } ) %>");

@@ -1,6 +1,6 @@
 module PrjctsHelper
 	def display_likes(prjct)
-		votes = prjct.votes_for.up.by_type(User)
+		votes = prjct.votes_for.up.by_type('User')
 		return count_likers(votes)
 	end
 

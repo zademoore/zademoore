@@ -1,0 +1,105 @@
+/**** Projects ****/
+
+
+@media screen and (max-width: 670px) {
+
+	body {
+		font-size: 15px;
+	}
+
+	p {
+		line-height: 32px;
+
+	}
+
+	h1 {
+		font-size: 322%;
+	}
+
+	.top {
+		margin-top: 4em;
+		padding: 0 40px;
+
+	}
+
+	.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+	    width: 29px;
+	    height: 4px;
+	}
+
+	.menu-trigger.active {
+	    left: 250px;
+	}
+
+	.nav-drawer {
+		width: 250px;
+		left: -230px;
+	}
+
+	.nav-drawer.open {
+		left: 0;
+	}
+
+	.menu-trigger.active {
+    	left: 250px;
+	}
+
+	.rapper.over {
+		left: 260px;
+	}
+
+    .projects {
+        width: 100%;
+        max-height: none;
+        float: none;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .container {
+    	padding: 0;
+    }
+
+    .project {
+    	max-height: 75vh;
+    	width: 100%;
+    }
+
+    .action-links {
+    	margin: 3px;
+    	float: left;
+    }
+
+    a.btn-new,
+    .btn-new {
+    	font-size: 12px;
+    	border: 0;
+    } 
+
+    .overview {
+    	margin: 3em auto;
+    }
+
+    .images {
+    	width: 100%;
+    	margin-bottom: 2em;
+    }
+
+    .thousandwords img {
+	    max-width: 100%;
+	    max-height: 100%;
+	}
+
+	.thousandwords .left, .thousandwords .right {
+		float: left;
+		text-align: left;
+		max-width: 80%;
+		padding: none;
+		padding-top: 2em;
+	}
+
+	.form-control {
+		width: 90%;
+	}
+
+}

@@ -1,6 +1,6 @@
 class PrjctsController < ApplicationController
 
-	before_action :set_prjct, only: [:show, :edit, :update, :destroy, :like]
+	before_action :set_prjct, only: [:show, :edit, :update, :destroy, :like, :unlike]
 
 	def index
 		@prjcts = Prjct.all.order("created_at desc")
@@ -42,6 +42,15 @@ class PrjctsController < ApplicationController
 
 	def like
 		if @prjct.liked_by current_user
+			respond_to do |format|
+				format.html { redirect_to :back }
+				format.js
+			end
+		end
+	end
+
+	def unlike
+		if @prjct.unliked_by current_user
 			respond_to do |format|
 				format.html { redirect_to :back }
 				format.js
