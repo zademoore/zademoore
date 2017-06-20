@@ -2,7 +2,7 @@
 	<h1> new </h1>
 </section>
 <section>
-	<%= if current_user && admin_user %>
+	<% if current_user && admin_user %>
 		<%= render 'form', prjct: @prjct %>
 	<% end %>
 </section>
