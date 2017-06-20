@@ -2,5 +2,11 @@
 	<h1>Edit</h1>
 </section>
 <section>
-	<%= render 'form', prjct: @prjct %>
+	<% if current_user && admin_user %>
+		<%= render 'form', prjct: @prjct %>
+	<% else %>
+		<%= link_to 'auth/facebook' do %>
+			Admin Only <i class="fa fa-facebook-official" aria-hidden="true"></i>
+		<% end %>
+	<% end %>
 </section>	
