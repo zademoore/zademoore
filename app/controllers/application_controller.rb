@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def admin_user
-  	@admin_user ||= current_user.uid == ENV["ADMIN_UID"]
+  	@admin_user ||= current_user.uid == ENV['ADMIN_UID']
   end
 
   helper_method :current_user
