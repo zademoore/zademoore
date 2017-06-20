@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  resources :prjcts, except: [:index] do
+  resources :prjcts, path: 'projects', except: [:index] do
   	resources :pictures, except: [:show, :index]
   	resources :comments
   	member do 
