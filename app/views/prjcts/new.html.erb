@@ -4,5 +4,9 @@
 <section>
 	<% if current_user && admin_user %>
 		<%= render 'form', prjct: @prjct %>
+	<% else %>
+		<%= link_to '/auth/facebook' do %>
+			Login <i class="fa fa-facebook-official" aria-hidden="true"></i>
+		<% end %>
 	<% end %>
 </section>
